@@ -1,28 +1,21 @@
-== README
+# Leave, a smart alarm for London Transport
+Leave is an app that intelligently sets a mobile device notification to tell the user to leave the London Tube station. Based on a starting station and an ending station, the app queries TFL's system for the route and any anticipated disruptions effecting the timeliness of the journey. Leave also compensates for weather conditions, allowing more time for inclement weather.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rails Backend
+This repo holds the Rails backend that queries external services and performs a complex calculation to determine the best departure time given transport and weather conditions. Rails is configured as an API that receives RESTful calls from the Ionic front end application (see [Leave frontend](https://github.com/MisaOgura/leave-frontend.git)).
 
-Things you may want to cover:
+## Technologies used
+* Rails
+* rails-api
+* HTTPParty
+* Active Model Serializers
+* Postgres
 
-* Ruby version
+## Challenges
+This project was executed leveraging Rails' built-in scaffolding to quickly turn up the API. At first, we did not configure Rails as an API application which caused significant issues when it came time to have the front end app "talk" with Rails server. Rather than troubleshoot that issue, we elected to scrap our work thus far and start again, this time using the rails-api gem. Within an hour we had a working application that responded to the front end's requests for data.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Team
++ Misa Ogura
++ Patrizio Donati
++ Shane Oston Stowe
++ Rhiannon Lolley Neville
